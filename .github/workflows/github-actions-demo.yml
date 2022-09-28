@@ -1,25 +1,16 @@
 name: 01-1. GitHub Actions Demo
-
-# Controls when the workflow will run
-on:
-    
-# Triggers the workflow on push or pull request events but only for the "main" branch
+on:    
   push:
     branches: 
       - main 
     paths:
-      - 'labs/**'    
-    
-
-# Allows you to run this workflow manually from the Actions tab
+      - 'labs/**'   
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   Explore-GitHub-Actions:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
-  steps:
+    steps:
       - run: echo "The job was automatically triggered by a ${{github.event_name}} event."
       - run: echo "The job is now running on a ${{runner.os}} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
