@@ -2,7 +2,7 @@ name: 05-1. GitHub Script - Thank you
 on:
   issues: 
     types: [opened, edited, reopened, labeled]
-  workflow_dispatch:
+  
   
 # Limit the permissions of the GITHUB_TOKEN
 permissions:
