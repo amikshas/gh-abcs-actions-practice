@@ -2,7 +2,8 @@ name: 05-1. GitHub Script - Thank you
 on:
   issues: 
     types: [opened, edited, reopened, labeled]
-
+  workflow_dispatch:
+  
 # Limit the permissions of the GITHUB_TOKEN
 permissions:
   contents: read
@@ -33,6 +34,6 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              labels: ['Training']
+              labels: ['Training123']
             })
   
